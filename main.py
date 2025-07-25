@@ -37,7 +37,7 @@ def interactive_menu():
 
         elif choice == '3':
             domain = input("Enter domain for subdomain: ").strip()
-            subdomain_enum.subdomain(domain)
+            subdomain_enum.subdomain(domain,report_file)
 
         elif choice == '4':
             target = input("Enter IP or domain: ").strip()
