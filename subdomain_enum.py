@@ -1,7 +1,7 @@
 import requests
 from logger import logger
 
-def subdomain(domain, report_file):
+def subdomain(domain):
     logger = logging.getLogger("ReconTool")
     url = f"https://crt.sh/?q=%25.{domain}&output=json"
     try:
