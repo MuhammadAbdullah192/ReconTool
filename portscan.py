@@ -10,6 +10,9 @@ def is_valid_ip(ip):
 def is_valid_domain(domain):
     return re.match(r"^(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$", domain) is not None
 
+def is_valid_target(target):
+    return is_valid_ip(target) or is_valid_domain(target)
+
 def run_nmap_scan(target, report_file="recon_report.txt"):
     if not (is_valid_ip(target) or is_valid_domain(target)):
         print("[!] Invalid IP or domain format!")
