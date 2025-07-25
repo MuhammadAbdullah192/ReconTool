@@ -1,24 +1,28 @@
 # ReconTool
-🛠 Features
-🔹 Passive Reconnaissance
-WHOIS Lookup – Retrieve domain registration and ownership details.
+**🛠 Features**
+**🔹 Passive Reconnaissance**
 
-DNS Enumeration – Resolve DNS records (A, MX, NS, TXT).
+  WHOIS Lookup **–** Retrieve domain registration and ownership details.
 
-Subdomain Enumeration – Discover subdomains using a wordlist.
+  DNS Enumeration **–** Resolve DNS records (A, MX, NS, TXT).
 
-🔹 Active Reconnaissance
-Port Scanning – Scan open ports using Nmap.
+  Subdomain Enumeration **–** Discover subdomains using a wordlist.
 
-Banner Grabbing – Extract service banners from open ports.
+**🔹 Active Reconnaissance**
 
-Technology Detection – Identify technologies running on a target using WhatWeb or Wappalyzer API.
+Port Scanning **–** Scan open ports using Nmap.
 
-🧾 Reporting
-Results are saved to recon_report.txt with timestamps.
+Banner Grabbing **–** Extract service banners from open ports.
 
-Logging is stored in recon.log.
+Technology Detection **–** Identify technologies running on a target using WhatWeb or Wappalyzer API.
 
-install system requirements from this
+**🧾 Reporting**
+
+  Results are saved to recon_report.txt with timestamps.
+
+  Logging is stored in recon.log.
+
+Install system requirements from this
+
 
 **pip install -r requirements.txt**
