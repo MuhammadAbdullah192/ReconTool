@@ -6,7 +6,7 @@ from datetime import datetime
 def is_valid_domain(domain):
     return re.match(r"^(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$", domain)
 
-def dns_lookup():
+def dns_lookup(domain):
     domain = input("Enter domain for DNS enumeration: ").strip()
     if not is_valid_domain(domain):
         print("[!] Invalid domain format.")
