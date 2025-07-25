@@ -1,3 +1,4 @@
+
 import socket
 import re
 from logger import logger 
@@ -8,21 +9,19 @@ def is_valid_target(target):
     return re.match(ip_regex, target) or re.match(domain_regex, target)
 
 def grab_banner(ip_address, port):
-    target = input("Enter IP or domain for banner grab: ").strip()
-
-    if not is_valid_target(target):
+    if not is_valid_target(ip_address):
         print("[!] Invalid IP or domain.")
-        logger.warning(f"Invalid target entered for banner grab: {target}")
-        return
+        logger.warning(f"Invalid target entered for banner grab: {ip_address}")
+        return ''
 
     try:
         s = socket.socket()
         s.settimeout(5)
         s.connect((ip_address, port))
-        banner = s.recv(1024).decode().strip()
+        banner = s.recv(1024).decode(errors="ignore").strip()
         s.close()
 
-        print(f"[+] Banner from {ip_address}:{port}:\n{banner}")
+        print(f"[+] Banner from {ip_address}:{port}:\n")
         logger.info(f"Banner grabbed from {ip_address}:{port}: {banner}")
         return banner
 
