@@ -1,11 +1,13 @@
 import requests
+import logging
 from logger import logger
 
-def subdomain(domain):
+def subdomain(domain, report_file):
     logger = logging.getLogger("ReconTool")
     url = f"https://crt.sh/?q=%25.{domain}&output=json"
+    headers = {'User-Agent': 'Mozilla/5.0'}  # ✅ Fix: add user-agent header
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, headers=headers, timeout=10)
         data = response.json()
         subdomains = set()
         for entry in data:
