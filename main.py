@@ -26,17 +26,17 @@ def interactive_menu():
         choice = input("Enter your choice: ").strip()
 
         if choice == '1':
-            domain = input("Enter domain: ").strip()
+            domain = input("Enter domain for WHOIS: ").strip()
             if whois.is_valid_domain(domain):
                 whois.whois_lookup(domain, "recon_report.txt")
 
         elif choice == '2':
-            domain = input("Enter domain: ").strip()
+            domain = input("Enter domain for DNS_Enum: ").strip()
             if dns_enum.is_valid_domain(domain):
                 dns_enum.dns_lookup(domain)
 
         elif choice == '3':
-            domain = input("Enter domain: ").strip()
+            domain = input("Enter domain for subdomain: ").strip()
             subdomain_enum.subdomain_lookup(domain)
 
         elif choice == '4':
@@ -45,13 +45,13 @@ def interactive_menu():
                 portscan.run_nmap_scan(target)
 
         elif choice == '5':
-            ip = input("Enter IP: ").strip()
+            ip = input("Enter IP for banner grabbing: ").strip()
             port = int(input("Enter port: ").strip())
             banner = banner_grabber.grab_banner(ip, port)
             print(f"Banner:\n{banner.decode(errors='ignore')}")
 
         elif choice == '6':
-            domain = input("Enter domain: ").strip()
+            domain = input("Enter domain for tech detection: ").strip()
             tech_detector.tech_detect_whatweb(domain)
 
         elif choice == '7':
