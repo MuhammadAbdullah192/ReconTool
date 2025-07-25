@@ -107,4 +107,7 @@ def cli_handler():
         interactive_menu()
 
 if __name__ == "__main__":
-    cli_handler()
+    try:
+        cli_handler()
+    except KeyboardInterrupt:
+        print("\n Keyboard interrupt")
