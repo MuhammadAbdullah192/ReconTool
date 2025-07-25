@@ -24,7 +24,6 @@ def subdomain(domain):
             print(sub)
             report_lines.append(sub)
 
-        # Save all at once to recon_report.txt
         with open("recon_report.txt", "a") as f:
             f.write("\n".join(report_lines) + "\n")
 
