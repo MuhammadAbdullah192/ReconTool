@@ -48,7 +48,7 @@ def interactive_menu():
             ip = input("Enter IP for banner grabbing: ").strip()
             port = int(input("Enter port: ").strip())
             banner = banner_grabber.grab_banner(ip, port)
-            print(f"Banner:\n{banner.decode(errors='ignore')}")
+            print(f"Banner:\n{banner}")
 
         elif choice == '6':
             domain = input("Enter domain for tech detection: ").strip()
