@@ -5,7 +5,7 @@ from logger import logger
 def subdomain(domain, report_file):
     logger = logging.getLogger("ReconTool")
     url = f"https://crt.sh/?q=%25.{domain}&output=json"
-    headers = {'User-Agent': 'Mozilla/5.0'}  # ✅ Fix: add user-agent header
+    headers = {'User-Agent': 'Mozilla/5.0'}
     try:
         response = requests.get(url, headers=headers, timeout=10)
         data = response.json()
