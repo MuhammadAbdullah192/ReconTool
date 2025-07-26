@@ -1,4 +1,3 @@
-
 import socket
 import re
 from logger import logger 
@@ -28,4 +27,4 @@ def grab_banner(ip_address, port):
     except Exception as e:
         print(f"[!] Could not grab banner: {e}")
         logger.error(f"Error grabbing banner from {ip_address}:{port}: {e}")
-        return ''
+        return 
